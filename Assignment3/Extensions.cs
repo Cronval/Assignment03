@@ -14,5 +14,11 @@ namespace Assignment3
             }
             return false;
         }
+
+        public static int WordCount(this string input)
+        {
+            var split = input.Split(" ");
+            return split.Length;
+        }
     }
 }

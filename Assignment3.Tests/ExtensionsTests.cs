@@ -15,5 +15,17 @@ namespace BDSA2021.Assignment03.Tests
 
             Assert.True(expected);
         }
+
+        [Fact]
+        public void WordCount_returns_2_given_hello_world()
+        {
+            var input = "Hello World";
+
+            var expected = 2;
+
+            var actual = Extensions.WordCount(input);
+
+            Assert.Equal(expected,actual);
+        }
     }
 }
