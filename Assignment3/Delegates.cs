@@ -9,18 +9,27 @@ using System.Linq;
 namespace Assignment3
 {
     public static class Delegates {
-        public static IEnumerable<char> ReverseString(string input) 
+        public static void ReverseString(string input) 
         {
-            Func<string,IEnumerable<char>> reverse = delegate(string s) { return s.Reverse(); };
+            Action<string> reverse = s => s.Reverse().ToList().ForEach(c => Console.Write(c));
 
-            var output = reverse(input);
-            var result = "".Concat<char>(output);
+            reverse(input);
 
-            Console.WriteLine(result);
-            
-            //(string s) => s.Reverse();
+        }
 
-            return output;
+        public static decimal Product(decimal x,decimal y) 
+        {
+            Func<decimal,decimal,decimal> product = (a,b) => a*b;
+
+            return product(x,y);
+
+        }
+
+        public static bool NumEqual(int n, string s)
+        {
+            Func<int,string,bool> equal = (a,b) => int.Parse(b) == a;
+
+            return equal(n,s);
         }
     }
 }
