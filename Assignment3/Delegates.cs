@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 /*
-    NOT DONE
+    Only here so tests run. Also found in the .pdf-file.
 */
 
 namespace Assignment3
