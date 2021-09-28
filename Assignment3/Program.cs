@@ -6,7 +6,8 @@ namespace Assignment3
     {
         public static void Main(string[] args)
         {
-           Console.WriteLine(Delegates.ReverseString("hello"));
+           Delegates.ReverseString("hello");
+
         }
     }
 }
